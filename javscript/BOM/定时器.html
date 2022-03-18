@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>stop</button>
+    <script>
+        var btn=document.querySelector('button')
+        //setTimeout(调用函数，延迟时间) 只调用一次函数
+        var time1=setTimeout(function (){
+            console.log('boom')
+        },5000)
+        btn.addEventListener('click',function () {
+            clearTimeout(time1)
+        })
+        //setInterval(回调函数，间隔时间) 会反复调用函数
+        setInterval(function () {
+            console.log('1')
+        },1000)
+    </script>
+</body>
+</html>

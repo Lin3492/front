@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var l1=[0]
+        var l2=[3,4,3]
+        function add(l1,l2){
+            if(l1.length>l2.length){
+                for(let i=0;i<l1.length-l2.length;i++){
+                    l2.unshift(0);
+                }
+            }else{
+                for(let i=0;i<l2.length-l1.length;i++){
+                    l1.unshift(0);
+                }
+            }
+            console.log(l1);
+            console.log(l2);
+            var maxlen=l1.length>l2.length?l1.length:l2.length
+            var flag=0
+            var addArr=[]
+            for(let i=maxlen-1;i>=0;i--){
+                if(flag==1){
+                    addArr[i]=l1[i]+l2[i]+1
+                    if(addArr[i]>=10){
+                        addArr[i]%=10
+                        flag=1
+                    }else{
+                        flag=0
+                    }
+                }else{
+                    addArr[i]=l1[i]+l2[i]
+                    if(addArr[i]>=10){
+                        addArr[i]%=10
+                        flag=1
+                    }else{
+                        flag=0
+                    }
+                }
+            }
+            return addArr
+        }
+        var a=add(l1,l2)
+        console.log(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector('div')
+        window.addEventListener('resize',function () {
+            console.log('change')
+            if (window.innerWidth<=800){
+                div.style.display='none'
+            }else {
+                div.style.display='block'
+            }
+        })
+    </script>
+</body>
+</html>

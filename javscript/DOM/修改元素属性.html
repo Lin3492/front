@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <div>
+        刘德华
+    </div>
+    <script>
+        //1.获取元素
+        var ldh = document.getElementById('ldh')
+        var zxy = document.getElementById('zxy')
+        var txt = document.querySelector('div')
+        //2.注册事件
+        ldh.onclick=function(){
+            txt.innerHTML='刘德华'
+        }
+        zxy.onclick=function(){
+            txt.innerHTML='张学友'
+        }
+    </script>
+</body>
+</html>
