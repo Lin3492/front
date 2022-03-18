@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>symbol创建对象属性</title>
+</head>
+<body>
+    <script>
+        //向对象中添加方法
+        let game={
+            name:'Russia',
+            up:function (){
+                console.log('00')
+
+            },
+            down:function ( ){
+                console.log('0000')
+            }
+        }
+        let methods={
+            up:Symbol(),
+            down:Symbol()
+        }
+        game[methods.up]=function (){
+            console.log('123')
+        }
+        game[methods.down]=function () {
+            console.log('456')
+        }
+        console.log(game)
+    </script>
+</body>
+</html>

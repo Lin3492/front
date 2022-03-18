@@ -10,7 +10,21 @@
     <div></div>
 
     <script>
+        //1.数组合并
+        const arr1=[1,2,3]
+        const arr2=[4,5,6]
+        // const arr3=arr1.concat(arr2)
+        const arr3=[...arr1,...arr2]
+        console.log(arr3)
 
+        //2.数组克隆
+        const arr4=[...arr1]
+        console.log(arr4)
+
+        //3.将伪数组转换为真正的数组
+        const div=document.querySelectorAll('div')
+        const divarr=[...div]
+        console.log(divarr)
     </script>
 </body>
 </html>
