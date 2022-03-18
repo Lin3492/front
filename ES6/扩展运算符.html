@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展运算符</title>
+</head>
+<body>
+    <script>
+        //[...]扩展运算符能够将数组转换为逗号分隔的参数序列
+        const arr=[1,2,3,4]
+        function f() {
+            console.log(arguments)
+        }
+        f(arr)
+        f(...arr)
+    </script>
+</body>
+</html>

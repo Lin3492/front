@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的简化写法</title>
+</head>
+<body>
+    <script>
+        //es6允许在大括号里面，直接写入变量和函数，作为对象的属性和方法
+        let name='lzx'
+        let change=function () {
+            console.log('Hello')
+        }
+        const school={
+            name,
+            change,
+            improve(){
+                console.log(123)
+            }
+        }
+        console.log(school)
+    </script>
+</body>
+</html>
