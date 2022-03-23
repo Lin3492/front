@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //2.apply()
+        var o={
+            name:'andy'
+        }
+        function fn(arr){
+            console.log(this)
+            console.log(arr)
+        }
+        fn.apply(o,['lzx'])
+        //1.也是调用函数，也可以改变函数内部的this指向
+        //2.但是他的参数必须是数组
+        //3.apply()的主要应用
+        var arr=[1,99,88,43,23,22]
+        var max=Math.max.apply(Math,arr)
+        console.log(max)
+    </script>
+</body>
+</html>

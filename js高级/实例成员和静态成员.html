@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实例成员和静态成员</title>
+</head>
+<body>
+    <script>
+        //实例成员是构造函数内部通过this添加的成员
+        //实例成员只能通过实例化对象访问
+        function Star(uname,age){
+            this.uname=uname
+            this.age=age
+            this.sing=function (){
+                console.log('I can sing')
+            }
+        }
+        var ldh=new Star('ldh',18)
+        console.log(ldh.uname)
+        ldh.sing()
+        //静态成员 在构造函数本身上添加的成员
+        Star.sex='male'
+        //静态成员只能通过构造函数来访问
+        console.log(Star.sex)
+    </script>
+</body>
+</html>

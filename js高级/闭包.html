@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //闭包指有权访问另一个函数作用域中变量的函数
+        //fun访问了fn中的num
+        //闭包的主要作用：延伸了变量的作用范围
+        function fn() {
+            var num=10
+            function fun() {
+                console.log(num)
+            }
+            return fun
+        }
+        var f=fn()
+        f()
+    </script>
+</body>
+</html>

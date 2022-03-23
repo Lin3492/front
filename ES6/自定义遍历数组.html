@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义遍历数组</title>
+</head>
+<body>
+    <script>
+        const obj={
+            name:'class-1',
+            students:['zhang','li','wang','lin'],
+            [Symbol.iterator](){
+                //索引变量
+                let index=0
+                let that=this
+                return {
+                    next:function() {
+                        if(index<that.students.length){
+                            const result={value:that.students[index],done:false}
+                            index++
+                            return result
+                        }else {
+                            return {value: undefined,done: true}
+                        }
+
+                }
+                }
+        }
+        }
+        //遍历对象
+        for (let v of obj){
+            console.log(v)
+        }
+
+    </script>
+</body>
+</html>

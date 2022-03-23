@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类的本质</title>
+</head>
+<body>
+    <script>
+        //class的本质还是一个函数
+        class Star {
+
+        }
+
+        console.log(Star.prototype)
+        console.log(Star.prototype.constructor)
+        Star.prototype.sing=function (){
+            console.log('aaa')
+        }
+        var a=new Star()
+        console.dir(a)
+    </script>
+
+
+</body>
+</html>

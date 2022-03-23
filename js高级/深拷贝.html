@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var obj={
+            id:1,
+            name:'andy',
+            msg:{
+                age:18
+            }
+        }
+        var o={}
+        function deepCopy(newobj,srcobj) {
+            for (var k in srcobj){
+                //1.获取属性值
+                var item=srcobj[k]
+                if(item instanceof Array){
+                    newobj[k]=[]
+                    deepCopy(newobj[k],item)
+                }else if(item instanceof Object){
+                    newobj[k]={}
+                    deepCopy(newobj[k],item)
+                }else {
+                    newobj[k]=item
+                }
+
+            }
+        }
+        deepCopy(o,obj)
+        console.log(o)
+    </script>
+</body>
+</html>

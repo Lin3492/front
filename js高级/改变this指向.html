@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //改变函数指向的三种方法：call()  apply()  bind()
+        //1.call()
+        var o={
+            name:'andy'
+        }
+        function fn(a,b){
+            console.log(this)
+            console.log(a+b)
+        }
+        fn.call(o,1,2)
+        //call可以调用函数和改变this指向
+        //call的主要作用是实现继承
+        function Father(uname,age,sex) {
+            this.uname=uname
+            this.age=age
+            this.sex=sex
+        }
+        function Son(uname,age,sex) {
+            Father.call(this,uname,age,sex)
+        }
+        var son =new Son('shy',18,'man')
+        console.log(son)
+    </script>
+</body>
+</html>

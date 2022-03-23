@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成器</title>
+</head>
+<body>
+    <script>
+        //生成器其实是一个特殊的函数
+        //异步编程 纯回调函数 node fs ajax mongodb
+        //yield为函数代码的分隔符
+        function * f() {
+            console.log(111)
+            yield 'hhh'
+            console.log(222)
+            yield 'iii'
+            console.log(333)
+            yield 'jjj'
+            console.log(444)
+        }
+        let it=f()
+        for (let v of f()){
+            console.log(v)
+        }
+    </script>
+</body>
+</html>

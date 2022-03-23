@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型</title>
+</head>
+<body>
+    <script>
+        //构造函数通过原型分配的函数是所有对象共享的
+        function Star(uname,age) {
+            this.uname=uname
+            this.age=age
+        }
+        Star.prototype.sing=function (){
+            console.log('I can sing')
+        }
+        var a=new Star('a',18)
+        var b=new Star('b',19)
+        console.log(a.sing===b.sing)
+    </script>
+</body>
+</html>

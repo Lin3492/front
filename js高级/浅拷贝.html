@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //浅拷贝只拷贝一层，更深层次的对象级别值拷贝引用
+        //深拷贝拷贝多层，每一级别的数据都会拷贝
+        var obj={
+            id:1,
+            name:'andy',
+            msg:{
+                age:18
+            }
+        }
+        var o={}
+        for (var i in obj){
+            o[i]=obj[i]
+        }
+        console.log(o)
+        o.msg.age=20
+        console.log(obj)
+    </script>
+</body>
+</html>
